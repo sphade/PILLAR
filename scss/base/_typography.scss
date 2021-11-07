@@ -1,0 +1,60 @@
+// make all typography look the same at default
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 1 */
+  line-height: 1.5;
+  /* 2 */
+}
+
+/**
+   * Inherit font-family and line-height from `html` so users can set them as
+   * a class directly on the `html` element.
+   */
+
+body {
+  font-family: inherit;
+  line-height: inherit;
+}
+img {
+    border-style: solid;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input::-moz-placeholder, textarea::-moz-placeholder {
+    opacity: 1;
+    color: #9ca3af;
+  }
+  
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    opacity: 1;
+    color: #9ca3af;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 1;
+    color: #9ca3af;
+  }
+  
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }

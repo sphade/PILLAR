@@ -1,10 +1,11 @@
-// Remove default margin and padding from web browser
 * ::before,
 ::after {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 blockquote,
 dl,
 dd,
@@ -21,6 +22,7 @@ pre {
   margin: 0;
   padding: 0;
 }
+
 fieldset {
   margin: 0;
   padding: 0;
@@ -31,6 +33,7 @@ ul {
   list-style: none;
   margin: 0;
 }
+
 img,
 svg,
 video,
@@ -66,7 +69,6 @@ object {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-
   .btn {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -74,6 +76,7 @@ object {
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -94,6 +97,8 @@ object {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -108,9 +113,6 @@ object {
 .h-full {
   height: 100%;
 }
-
-
-
 
 .h-\[calc\(\)\] {
   height: calc();
@@ -133,7 +135,7 @@ object {
 }
 
 .h-\[calc\(100vh-\)\] {
-  height: calc(100vh );
+  height: calc(100vh);
 }
 
 .h-\[calc\(100vh-h\)\] {
@@ -177,17 +179,96 @@ object {
 }
 
 .flex-1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0%;
   flex: 1 1 0%;
 }
 
 .flex-shrink-\[3\] {
+  -ms-flex-negative: 3;
   flex-shrink: 3;
 }
 
 .flex-shrink-\[1\] {
+  -ms-flex-negative: 1;
   flex-shrink: 1;
 }
 
 .flex-grow {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 1 */
+  line-height: 1.5;
+  /* 2 */
+}
+
+/**
+   * Inherit font-family and line-height from `html` so users can set them as
+   * a class directly on the `html` element.
+   */
+body {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+img {
+  border-style: solid;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
 }
